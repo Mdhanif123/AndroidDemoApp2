@@ -68,8 +68,5 @@ class NewsFeedFragment : Fragment() {
                 "Simform"
             )
         newsFeedArrayList.add(newsFeedDataClass)
-
-
-
     }
 }
