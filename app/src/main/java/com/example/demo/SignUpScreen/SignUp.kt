@@ -60,7 +60,7 @@ class SignUp : AppCompatActivity() {
                     headerDetails.add(txtUsername.text.toString())
                 }
             } else if (trackFragment == 2) {
-                if (txtFamilyCountValue.text.toString()== "0" || gender == "Empty" || txtBirthDate.text.isEmpty() ) {
+                if (txtFamilyCountValue.text.toString()== "0" || gender == "Empty" || txtBirthDate.text.isEmpty() || imgProfile_Picture_SignUpScreen.drawable == null ) {
                     Toast.makeText(this, getString(R.string.signUpDisplayError), Toast.LENGTH_SHORT).show()
                 } else {
                     signUpDetails.add(txtFamilyCountValue.text.toString())
@@ -80,7 +80,7 @@ class SignUp : AppCompatActivity() {
                     txtfragmentTrack.text = "Step ${trackFragment} of 3"
                 }
             } else if (trackFragment == 3) {
-                if (txtAboutYourself.text.toString().isEmpty() || txtSelfKnowledgePoint.text.toString().isEmpty() || t_c_checkbox.isChecked == false) {
+                if (txtAboutYourself.text.toString().isEmpty() || txtSelfKnowledgePoint.text.toString().isEmpty() || t_c_checkbox.isChecked == false ) {
                     Toast.makeText(this, getString(R.string.signUpDisplayError), Toast.LENGTH_SHORT).show()
                 } else {
                     signUpDetails.add(txtAboutYourself.text.toString())
