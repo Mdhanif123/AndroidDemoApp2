@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpScreen.Fragment_SignUpScreenOne">
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtFirstName"
+                style="@style/HintText"
+                android:hint="@string/firstname_hint"
+                android:inputType="textPersonName"
+                android:background="@drawable/edittext_shadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:imeOptions="actionNext"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintHeight_percent="16.66"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtLastName"
+                style="@style/HintText"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintHeight_percent="16.66"
+                android:background="@drawable/edittext_shadow"
+                android:hint="@string/lastname_hint"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUsername"
+                style="@style/HintText"
+                android:background="@drawable/edittext_shadow"
+                android:hint="@string/username_hint"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLastName"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintHeight_percent="16.66"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmailAddressSignUp"
+                style="@style/HintText"
+                android:background="@drawable/edittext_shadow"
+                android:hint="@string/email_address_hint"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintHeight_percent="16.66"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtUsername" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                app:passwordToggleEnabled="true"
+                android:id="@+id/txtPasswordSignUp"
+                style="@style/HintText"
+                android:background="@drawable/edittext_shadow"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintHeight_percent="16.66"
+                android:hint="@string/hint_Password"
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtEmailAddressSignUp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtPasswordSignUp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/Teal"
+                app:hintEnabled="false"
+                android:layout_marginTop="20dp"
+                >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtConfirmpassword"
+                        style="@style/HintText"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/edittext_shadow"
+                        android:hint="@string/confirm_password"
+
+                        app:layout_constrainedHeight="true"
+                        app:layout_constraintHeight_percent="16.66"
+                        android:inputType="textPassword"
+                        />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

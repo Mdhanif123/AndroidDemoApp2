@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/postUserProfilePicture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/postUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Gates"
+        android:textSize="20sp"
+        android:fontFamily="@font/helvetica"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/postUserProfilePicture"
+        app:layout_constraintStart_toEndOf="@id/postUserProfilePicture"
+        app:layout_constraintBottom_toBottomOf="@id/postUserProfilePicture"
+        />
+
+    <TextView
+        android:textSize="25sp"
+        android:fontFamily="@font/helvetica"
+        android:id="@+id/postStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/postUserProfilePicture"
+        />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/postStatus"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/txtTotalLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/postImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="@string/total_likes"
+        android:textSize="15sp"
+        android:fontFamily="@font/helvetica"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/txtTotalComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/txtTotalLikes"
+        app:layout_constraintStart_toEndOf="@id/txtTotalLikes"
+        android:text="@string/total_comments"
+        android:textSize="15sp"
+        android:fontFamily="@font/helvetica"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="30dp"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/diffrenceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTotalLikes"
+        android:background="@color/gray"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/diffrenceLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+
+        <Button
+            android:id="@+id/btnLike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableLeft="@drawable/like"
+            android:drawableTintMode="screen"
+            android:drawableTint="@color/Teal"
+            android:drawablePadding="-15dp"
+            android:background="@color/White"
+            android:text="Like"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/Teal"
+            />
+
+        <Button
+            android:id="@+id/btnComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnLike"
+            android:drawableLeft="@drawable/commentbutton"
+            android:drawableTint="@color/Teal"
+            android:drawableTintMode="screen"
+            android:textColor="@color/Teal"
+            android:text="Comment"
+            android:fontFamily="@font/helvetica"
+            android:tint="@color/Teal"
+            android:background="@color/White"
+            />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnComment"
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@drawable/share"
+            android:drawableTint="@color/Teal"
+            android:fontFamily="@font/helvetica"
+            android:drawablePadding="-15dp"
+            android:text="Share"
+            android:textColor="@color/Teal"
+            android:tint="@color/Teal"
+            android:background="@color/White"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/Teal"
+        android:alpha="0.2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

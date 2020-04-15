@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="hint_username">Please enter your email address</string>
+    <string name="hint_Password">Please Enter Password (min 8 charac)</string>
+    <string name="btn_Login_Text">Login</string>
+    <string name="btn_forget_password_text">Forget Password ?</string>
+    <string name="btn_SignUp_text">SignUp</string>
+    <string name="otp_screen_header">Enter OTP</string>
+    <string name="check_email_for_otp">Check your registered email for OTP</string>
+    <string name="btn_submit_text">Submit</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstname_hint">Enter Firstname</string>
+    <string name="lastname_hint">Enter LastName</string>
+    <string name="username_hint">Enter Username</string>
+    <string name="email_address_hint">Enter Email Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="family_count_hint">Family Count</string>
+    <string name="gender_hint">Gender</string>
+    <string name="male_radioButton">Male</string>
+    <string name="female_radioButton">Female</string>
+    <string name="birthdate_hint">Select Your BirthDate</string>
+    <string name="about_yourself_hint">About Yourself</string>
+    <string name="self_knowledge_point_hint">Self Knowledge Point</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="total_comments">0 Comments</string>
+    <string name="total_likes">0 likes</string>
+
+    <string-array name="DummyData1">
+
+        <item name ="Firstname">FirstName</item>
+        <item name ="Lastname">LastName</item>
+        <item name ="Username">UserName</item>
+        <item name ="EmailId">Email Id</item>
+
+    </string-array>
+
+    <string-array name="DummyData2">
+
+        <item name ="FamilyCount">FamilyCount</item>
+        <item name ="Gender">Gender</item>
+        <item name ="dob">Date Of Birth</item>
+
+    </string-array>
+
+    <string-array name="DummyData3">
+
+        <item name = "About Yourself">About Yourself</item>
+        <item name = "Self KnowledgePoint">Self KnowledgePoint</item>
+
+    </string-array>
+
+</resources>

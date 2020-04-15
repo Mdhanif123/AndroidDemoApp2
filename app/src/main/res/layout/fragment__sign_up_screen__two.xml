@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpScreen.Fragment_SignUpScreen_Two">
+
+    <ImageView
+    android:id="@+id/imgProfile_Picture_SignUpScreen"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/circle"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+
+    <ImageButton
+        android:id="@+id/editProfilePicture"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/edit_profile_picture"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:tint="@color/White"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile_Picture_SignUpScreen"
+        app:layout_constraintStart_toEndOf="@id/imgProfile_Picture_SignUpScreen"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginBottom="-3dp"
+        />
+
+    <TextView
+        android:id="@+id/txtFamilyCount"
+        android:hint="@string/family_count_hint"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="25"
+        style="@style/HintText"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile_Picture_SignUpScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/btnIncremenetFamilyCount"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/add"
+        app:layout_constraintStart_toEndOf="@id/txtFamilyCount"
+        app:layout_constraintTop_toTopOf="@id/txtFamilyCount"
+        app:layout_constraintBottom_toBottomOf="@id/txtFamilyCount"
+        android:background="@color/White"
+        android:scaleType="fitXY"
+        />
+    <ImageButton
+        android:id="@+id/btnDecrementFamilyCount"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@id/btnIncremenetFamilyCount"
+        app:layout_constraintTop_toTopOf="@id/txtFamilyCount"
+        app:layout_constraintBottom_toBottomOf="@id/txtFamilyCount"
+        android:src="@drawable/minus"
+        android:background="@color/White"
+        />
+
+    <TextView
+        android:id="@+id/txtFamilyCountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/btnDecrementFamilyCount"
+        app:layout_constraintTop_toTopOf="@id/txtFamilyCount"
+        app:layout_constraintBottom_toBottomOf="@id/txtFamilyCount"
+        android:text="0"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:hint="@string/gender_hint"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        style="@style/HintText"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtFamilyCount"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/txtGender"
+        app:layout_constraintTop_toTopOf="@id/txtGender"
+        app:layout_constraintBottom_toBottomOf="@id/txtGender"
+        android:id="@+id/radioGroup"
+        >
+
+        <RadioButton
+            android:id="@+id/maleRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male_radioButton"
+            />
+
+        <RadioButton
+            android:id="@+id/femaleRadioButon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female_radioButton"
+            />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtBirthDate"
+        style="@style/HintText"
+        android:hint="@string/birthdate_hint"
+        app:layout_constraintTop_toBottomOf="@id/txtGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="false"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
