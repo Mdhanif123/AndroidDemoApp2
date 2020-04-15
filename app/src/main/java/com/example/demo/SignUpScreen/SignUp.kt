@@ -41,7 +41,7 @@ class SignUp : AppCompatActivity() {
             // Data validation and changing fragments
             if (trackFragment == 1) {
                 if (txtFirstName.text.toString().isEmpty() || txtLastName.text.toString().isEmpty() || txtUsername.text.toString().isEmpty() || txtEmailAddressSignUp.text.toString().isEmpty() || txtPasswordSignUp.text.toString().isEmpty()) {
-                    Toast.makeText(this, "Please Enter All the Details", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.signUpDisplayError), Toast.LENGTH_SHORT).show()
                 } else {
                     val transactionForFragment_SignUpScreen_Two = manager.beginTransaction()
                     val fragmentForSignUpScreen_Two =
@@ -60,13 +60,13 @@ class SignUp : AppCompatActivity() {
                     headerDetails.add(txtUsername.text.toString())
                 }
             } else if (trackFragment == 2) {
-                if (txtFamilyCountValue.text.toString()== "0" || gender == "Empty" || txtBirthDate.text.isEmpty() || imgProfile_Picture_SignUpScreen.drawable == null) {
-                    Toast.makeText(this, "Please Enter All the Details", Toast.LENGTH_SHORT).show()
+                if (txtFamilyCountValue.text.toString()== "0" || gender == "Empty" || txtBirthDate.text.isEmpty() ) {
+                    Toast.makeText(this, getString(R.string.signUpDisplayError), Toast.LENGTH_SHORT).show()
                 } else {
                     signUpDetails.add(txtFamilyCountValue.text.toString())
                     signUpDetails.add(gender)
                     signUpDetails.add(txtBirthDate.text.toString())
-                    headerDetails.add(Fragment_SignUpScreen_Two.imgPath!!)
+//                    headerDetails.add(Fragment_SignUpScreen_Two.imgPath!!)
                     val transactionForFragment_SignUpScreenThree = manager.beginTransaction()
                     val fragmentForSignUpScreen_Three =
                         Fragment_SignUpScreenThree()
@@ -80,8 +80,8 @@ class SignUp : AppCompatActivity() {
                     txtfragmentTrack.text = "Step ${trackFragment} of 3"
                 }
             } else if (trackFragment == 3) {
-                if (txtAboutYourself.text.toString().isEmpty() || txtSelfKnowledgePoint.text.toString().isEmpty()) {
-                    Toast.makeText(this, "Please Enter All the Details", Toast.LENGTH_SHORT).show()
+                if (txtAboutYourself.text.toString().isEmpty() || txtSelfKnowledgePoint.text.toString().isEmpty() || t_c_checkbox.isChecked == false) {
+                    Toast.makeText(this, getString(R.string.signUpDisplayError), Toast.LENGTH_SHORT).show()
                 } else {
                     signUpDetails.add(txtAboutYourself.text.toString())
                     signUpDetails.add(txtSelfKnowledgePoint.text.toString())

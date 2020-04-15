@@ -28,28 +28,34 @@
     <string name="title_notifications">Notifications</string>
     <string name="total_comments">0 Comments</string>
     <string name="total_likes">0 likes</string>
+    <string name="emailErrorAlert">Please enter a valid email address</string>
+    <string name="emptyDetailsError">Field can\'t be empty</string>
+    <string name="passwordAlertError">Please enter valid password</string>
+    <string name="signUpDisplayError">Please Enter All the Details</string>
+    <string name="TandCFileLocation">file:///android_asset/terms.html</string>
+    <string name="otpError">Enter 4 digits OTP</string>
 
     <string-array name="DummyData1">
 
-        <item name ="Firstname">FirstName</item>
-        <item name ="Lastname">LastName</item>
-        <item name ="Username">UserName</item>
-        <item name ="EmailId">Email Id</item>
+        <item name="Firstname">FirstName</item>
+        <item name="Lastname">LastName</item>
+        <item name="Username">UserName</item>
+        <item name="EmailId">Email Id</item>
 
     </string-array>
 
     <string-array name="DummyData2">
 
-        <item name ="FamilyCount">FamilyCount</item>
-        <item name ="Gender">Gender</item>
-        <item name ="dob">Date Of Birth</item>
+        <item name="FamilyCount">FamilyCount</item>
+        <item name="Gender">Gender</item>
+        <item name="dob">Date Of Birth</item>
 
     </string-array>
 
     <string-array name="DummyData3">
 
-        <item name = "About Yourself">About Yourself</item>
-        <item name = "Self KnowledgePoint">Self KnowledgePoint</item>
+        <item name="About Yourself">About Yourself</item>
+        <item name="Self KnowledgePoint">Self KnowledgePoint</item>
 
     </string-array>
 

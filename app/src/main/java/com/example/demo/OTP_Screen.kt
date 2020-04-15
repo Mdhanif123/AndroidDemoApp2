@@ -16,7 +16,7 @@ class OTP_Screen : AppCompatActivity() {
         // Submit otp validation and moving to home screen
         btnSubmitOTP.setOnClickListener {
             if (otpDigitOne.text.isEmpty() || otpDigitTwo.text.isEmpty() || otpDigitThree.text.isEmpty() || otpDigitFour.text.isEmpty()) {
-                Toast.makeText(this,"Enter 4 digits OTP", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.otpError), Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, HomeScreen::class.java)
                 startActivity(intent)
